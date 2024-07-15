@@ -71,3 +71,13 @@ const user1 = new User("Rob",34);
 console.log(user1);
 user1.greet(user1.name);
 
+// arrays
+
+const hobbies = ["sports","cooking","reading"];
+
+const index = hobbies.findIndex((item)=> item === "cooking");
+console.log(index);
+
+// maps
+const editHobbies = hobbies.map((item) => ({ hobby : item}));
+console.log(editHobbies);
