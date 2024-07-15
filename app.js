@@ -81,3 +81,23 @@ console.log(index);
 // maps
 const editHobbies = hobbies.map((item) => ({ hobby : item}));
 console.log(editHobbies);
+
+// destructing
+
+// const userNameData = ["Bobby" , "Millie"];
+
+// destrucuting 1
+// const fName = userNameData[0];
+// const lName = userNameData[1];
+
+// destrucuting 2
+const [fName,lName] = ["Bobby" , "Millie"];
+console.log(fName," :: ",lName)
+
+// use same key names or create alias
+const {name : Name, age :Age} = {
+    name:"Millie",
+    age:245
+};
+
+console.log(Name," :: ",Age)
