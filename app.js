@@ -39,3 +39,35 @@ console.log(cube(3));
 
 const cubeObj = n => ({cube : n**3});
 console.log(cubeObj(2));
+
+// objects 
+
+const currUser = {
+    name : "Bob" ,
+    code : 4523,
+    hello()
+    {
+        console.log(this.name);
+    }
+}
+
+console.log(currUser.name , " :: " , currUser.code);
+
+// classes
+
+class User {
+    constructor(name,age){
+        this.name = name;
+        this.age = age;
+    }
+
+    greet(userName)
+    {
+        console.log("User :: Hi ",userName);
+    }
+}
+
+const user1 = new User("Rob",34);
+console.log(user1);
+user1.greet(user1.name);
+
