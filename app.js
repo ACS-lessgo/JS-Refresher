@@ -101,3 +101,94 @@ const {name : Name, age :Age} = {
 };
 
 console.log(Name," :: ",Age)
+
+// spread operator
+
+const newHobbies = ["reading"];
+
+const mergeHobbies = [...newHobbies,...hobbies];
+console.log(mergeHobbies);
+
+const person1 = {
+    name:"Millie",
+    age:245
+};
+
+const person1Extented = {
+    address:"gg",
+    ...person1
+};
+console.log(person1Extented);
+
+// print index
+for(const hobby in mergeHobbies)
+    {
+        console.log("My hobby is : " ,hobby);
+    }
+
+// print values in array
+for(const hobby of mergeHobbies)
+    {
+        console.log("My hobby is : " ,hobby);
+    }
+
+function handleTimeout()
+{
+    console.log("Timed out!!");
+}
+
+// passes the function reference to timeout
+setTimeout(handleTimeout,1000);
+setTimeout(handleTimeout,2000);
+setTimeout(handleTimeout,3000);
+
+// passes return value to timeout
+// setTimeout(handleTimeout());
+
+
+// pass fnc as argument for fnc
+function greeter (greetFn)
+{
+    greetFn();
+}
+
+greeter(()=>console.log("Hi"));
+
+
+// exec func inside fnc scope
+function init()
+{
+    function greet(){
+        console.log("Inside init greet");
+    }
+    greet();
+}
+
+init();
+
+// primitive vs reference values
+
+// Primitive Values vs Reference Values
+// Primitive Values:
+
+// Primitive values include string, number, boolean, null, undefined, symbol, and bigint.
+// They are immutable, meaning their value cannot be changed once created.
+// Variables that hold primitive values store the actual value directly.
+// Reference Values:
+
+// Reference values include objects, arrays, and functions.
+// They are mutable, meaning their contents can be changed.
+// Variables that hold reference values store a reference (or pointer) to the actual value in memory, not the value itself.
+
+// const userMsg = "My Message";
+// userMsg = "ss";
+// console.log(userMsg);
+
+const testArr = ["1","2"];
+testArr.push("3");
+console.log(testArr);
+
+// array functions
+
+// map , find , findIndex , filter , reduce , concat , slice , splice 
+
